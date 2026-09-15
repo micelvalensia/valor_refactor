@@ -1,4 +1,7 @@
+"use client"
+
 import { BookMarked, Home, TrendingUp, User, Users } from "lucide-react"
+import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 const mobileBarMenu = [{
@@ -24,11 +27,11 @@ export function MobileBar() {
         <div className="border-t border-border/50 flex lg:hidden p-4">
             <div className="grid grid-cols-5 items-center justify-center gap-4 w-full">
                 {mobileBarMenu.map((mb) => (
-                    <div key={mb.href} className="text-white w-full flex items-center justify-center">
+                    <Link href={`${mb.href}`} key={mb.href} className="text-white w-full flex items-center justify-center">
                         <div className={`${pathname === mb.href ? "bg-main rounded-full p-2" : ""}`}>
                             <mb.icon size={30} />
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

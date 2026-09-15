@@ -1,3 +1,5 @@
+"use client"
+
 import { BookMarked, Home, Projector, Scroll, TrendingUp, Users } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -7,14 +9,6 @@ const sidebarMenu = [{
     title: "Home",
     icon: Home,
     href: "/home"
-}, {
-    title: "Problems",
-    icon: Scroll,
-    href: "/problems"
-}, {
-    title: "Projects",
-    icon: Projector,
-    href: "/projects"
 }, {
     title: "Trending",
     icon: TrendingUp,
